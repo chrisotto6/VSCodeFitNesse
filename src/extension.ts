@@ -27,3 +27,8 @@ export function activate(context: vscode.ExtensionContext) {
 // this method is called when your extension is deactivated
 export function deactivate() {
 }
+
+// Need to have a funciton to valid that the text is plain
+export function isFormattableGrammar(grammar) {
+    return grammar.scopeName === 'text.plain';
+}
