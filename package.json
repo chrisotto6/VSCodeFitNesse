@@ -7,6 +7,20 @@
     "engines": {
         "vscode": "^1.18.0"
     },
+    "license": "MIT",
+    "keywords": [
+        "fitnesse",
+        "wiki",
+        "formatter"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrisotto6/VSCodeFitNesse.git"
+    },
+    "homepage": "https://github.com/chrisotto6/VSCodeFitNesse",
+    "bugs": {
+        "url": "https://github.com/chrisotto6/VSCodeFitNesse/issues"
+    },
     "categories": [
         "Other"
     ],
@@ -18,7 +32,13 @@
         "commands": [
             {
                 "command": "extension.sayHello",
-                "title": "Hello World"
+                "title": "VS Code FitNesse"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "alt+f",
+                "command": "extension.sayHello"
             }
         ]
     },
