@@ -18,7 +18,7 @@
         "commands": [
             {
                 "command": "extension.sayHello",
-                "title": "Hello World"
+                "title": "VS Code FitNesse"
             }
         ]
     },

@@ -5,3 +5,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 - Initial release
+### Added
+- Base code creation from yo for the visual studio code extension
