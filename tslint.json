@@ -1,5 +1,4 @@
 {
-    "extends": "tslint:recommended",
     "rules": {
         "max-line-length": {
             "options": [120]
@@ -15,22 +14,6 @@
 		"curly": true,
 		"class-name": true,
 		"semicolon": true,
-		"triple-equals": true,
-        "no-console": {
-            "severity": "warning",
-            "options": [
-                "debug",
-                "info",
-                "log",
-                "time",
-                "timeEnd",
-                "trace"
-            ]
-        }
-    },
-    "jsRules": {
-        "max-line-length": {
-            "options": [120]
-        }
+        "triple-equals": true
     }
 }

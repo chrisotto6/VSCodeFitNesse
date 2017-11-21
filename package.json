@@ -25,20 +25,36 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.format",
+        "onLanguage:text"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "VS Code FitNesse -"
+                "command": "extension.format",
+                "title": "VS Code FitNesse Format"
             }
         ],
         "keybindings": [
             {
                 "key": "alt+f",
-                "command": "extension.sayHello"
+                "command": "extension.format"
+            }
+        ],
+        "languages":[
+            {
+                "id": "text",
+                "aliases": [
+                    "FitNesse", "fitnesse"
+                ],
+                "extensions": [
+                    ".txt"
+                ],
+                "filenames": [
+                    "content"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ]
     },
