@@ -1,5 +1,4 @@
-let WikiFormatter;
-export default WikiFormatter = class WikiFormatter {
+export class WikiFormatter {
   wikificationPrevention;
 
   //
@@ -246,7 +245,7 @@ export default WikiFormatter = class WikiFormatter {
     return (text || "").replace(/^\s+|\s+$/g, "");
   }
 
-  each(array, callback, context) {
+  each<any>(array, callback, context) {
     let index = 0;
     let { length } = array;
     while (index < length && callback.call(context, array[index], index) !== false) {
@@ -266,4 +265,4 @@ export default WikiFormatter = class WikiFormatter {
 
     return padded;
   }
-};
+}
