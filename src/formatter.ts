@@ -155,7 +155,7 @@ export class WikiFormatter {
       if (row.length > numberOfColumns) {
         numberOfColumns = row.length;
       }
-    });
+    }, undefined);
 
     return numberOfColumns;
   }
@@ -174,7 +174,7 @@ export class WikiFormatter {
           colspanWidths[colspan] = colspanWidth;
         }
       }
-    });
+    }, undefined);
 
     return colspanWidths;
   }
@@ -245,7 +245,7 @@ export class WikiFormatter {
     return (text || "").replace(/^\s+|\s+$/g, "");
   }
 
-  each<any>(array, callback, context) {
+  each(array, callback, context) {
     let index = 0;
     let { length } = array;
     while (index < length && callback.call(context, array[index], index) !== false) {
