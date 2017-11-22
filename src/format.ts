@@ -27,8 +27,8 @@ export class Formatter {
             let text = _doc.getText();
             let formattedText = wiki.format(text);
 
-            _editor.edit(builder => {
-                builder.replace(new vscode.Range(start, end), formattedText);
+            _editor.edit(update => {
+                update.replace(new vscode.Range(start, end), formattedText);
             });
             
             return;
