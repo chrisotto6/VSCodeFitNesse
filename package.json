@@ -25,17 +25,10 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.format",
         "onLanguage:text"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.format",
-                "title": "VS Code FitNesse Format"
-            }
-        ],
         "keybindings": [
             {
                 "key": "alt+f",
@@ -52,7 +45,7 @@
                     ".txt"
                 ],
                 "filenames": [
-                    "content"
+                    "content.txt"
                 ],
                 "configuration": "./language-configuration.json"
             }
