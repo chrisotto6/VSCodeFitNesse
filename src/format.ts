@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 import { WikiFormatter } from './wikiFormatter';
 
 export class Formatter {
-    // Main format function which will happen on save or when the keymapping is pressed
+    // Main format function which will happen on save
     public format() {
 
         // Variable creation
