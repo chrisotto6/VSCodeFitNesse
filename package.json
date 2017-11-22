@@ -35,11 +35,12 @@
                 "command": "extension.format"
             }
         ],
-        "languages":[
+        "languages": [
             {
                 "id": "text",
                 "aliases": [
-                    "FitNesse", "fitnesse"
+                    "FitNesse",
+                    "fitnesse"
                 ],
                 "extensions": [
                     ".txt"
