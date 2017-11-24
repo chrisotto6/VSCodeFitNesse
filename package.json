@@ -1,6 +1,6 @@
 {
     "name": "vscodefitnesse",
-    "displayName": "VSCodeFitNesse",
+    "displayName": "VS Code FitNesse",
     "description": "Extension used to format FitNesse wiki from Visual Studio Code.",
     "version": "0.0.1",
     "publisher": "chrisotto",
@@ -8,6 +8,8 @@
         "vscode": "^1.18.0"
     },
     "license": "MIT",
+    "icon": "./images/vscodefitnesse.png",
+    "preview": false,
     "keywords": [
         "fitnesse",
         "wiki",
@@ -22,7 +24,9 @@
         "url": "https://github.com/chrisotto6/VSCodeFitNesse/issues"
     },
     "categories": [
-        "Other"
+        "Other",
+        "Languages",
+        "Formatters"
     ],
     "activationEvents": [
         "onLanguage:text"
