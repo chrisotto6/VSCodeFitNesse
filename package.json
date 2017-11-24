@@ -2,7 +2,7 @@
     "name": "vscodefitnesse",
     "displayName": "VS Code FitNesse",
     "description": "Extension used to format FitNesse wiki from Visual Studio Code.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "chrisotto",
     "engines": {
         "vscode": "^1.18.0"
@@ -69,6 +69,6 @@
         "@types/mocha": "^2.2.42",
         "tslint": "^5.7.0",
         "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+        "vscode": "^1.18.0"
     }
 }

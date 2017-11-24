@@ -12,7 +12,7 @@ export class Formatter {
         let _doc = _editor.document;
         let lastLine = _doc.lineAt(_doc.lineCount - 2);
         let start = new vscode.Position(0, 0);
-        let end = new vscode.Position(_doc.lineCount - 1, lastLine.text.length);
+        let end = new vscode.Position(_doc.lineCount, lastLine.text.length);
 
         if (!_editor) {
           return;
