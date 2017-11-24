@@ -69,6 +69,6 @@
         "@types/mocha": "^2.2.42",
         "tslint": "^5.7.0",
         "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+        "vscode": "^1.18.0"
     }
 }
