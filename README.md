@@ -21,7 +21,7 @@ Be on the latest version of VS Code (utilizes workspaces), other than that there
 > As of right now only works with context.txt files any other kind of test caching or file extensions do not work. I believe the latest version of FitNesse comes
 > with a new .wiki extension. If you need to format the .wiki file extension please log an issue to the Github page. 
 
-## Release Notes
+## Major Release Notes
 
 ### 1.0.0
 
