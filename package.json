@@ -33,12 +33,6 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "keybindings": [
-            {
-                "key": "alt+f",
-                "command": "extension.format"
-            }
-        ],
         "languages": [
             {
                 "id": "text",
@@ -47,7 +41,7 @@
                     "fitnesse"
                 ],
                 "extensions": [
-                    ".txt"
+                    "content.txt"
                 ],
                 "filenames": [
                     "content.txt"
