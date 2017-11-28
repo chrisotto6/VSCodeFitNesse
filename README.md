@@ -1,4 +1,5 @@
 # VS Code FitNesse
+[![MarketPlaceVersion](https://vsmarketplacebadge.apphb.com/version/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse)[![MarketPlaceInstalls](https://vsmarketplacebadge.apphb.com/installs/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse)[![MarketPlaceRating](https://vsmarketplacebadge.apphb.com/rating/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse)
 
 A Visual Studio Code extension for formatting your FitNesse tests.
 
