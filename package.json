@@ -52,21 +52,21 @@
     "commands": [
       {
         "command": "extension.format",
-        "title": "Format FitNesse Test",
+        "title": "Format FitNesse Document",
         "category": "FitNesse"
       },
       {
         "command": "extension.formatContextMenu",
-        "title": "Format FitNesse Test",
+        "title": "Format FitNesse Document(s)",
         "category": "FitNesse"
       }
     ],
     "keybindings": [
       {
         "command": "extension.format",
-        "key": "f5",
-        "mac": "f5",
-        "when": "editorFocus"
+        "key": "Shift+Alt+F",
+        "mac": "Shift+Alt+F",
+        "when": "editorTextFocus && !editorReadonly"
       }
     ],
     "menus": {
