@@ -4,6 +4,7 @@ import * as vscode from 'vscode';
 import { WikiFormatter } from './wikiFormatter';
 
 export class Formatter {
+
     // Main format function which will happen on save
     public format() {
 
@@ -33,5 +34,40 @@ export class Formatter {
             
             return;
         }
+    }
+    
+    public formatContextMenu(uri) {
+
+        const fs = require('fs');
+        const path = require('path');
+
+        // get all files in a given directory, or return an array containing a single file if URI is not a directory
+        // https://gist.github.com/kethinov/6658166
+        const walkSync = (d) => fs.statSync(d).isDirectory() ? Array.prototype.concat(...fs.readdirSync(d).map(f => walkSync(path.join(d, f)))) : d;
+
+        let files = walkSync(uri);
+        
+        files.forEach(file => {
+            if (!file.endsWith("content.txt")) {
+                return;
+            }
+            
+            fs.readFile(file, "utf8", function(err, data) {
+                if(err) {
+                    return console.log(err);
+                }
+                
+                let wiki = new WikiFormatter();
+                let formattedText = wiki.format(data);
+                
+                fs.writeFile(file, formattedText, function(err) {
+                    if(err) {
+                        return console.log(err);
+                    }
+
+                    console.log("The file was saved!");
+                });
+            });
+        });
     }
 }
