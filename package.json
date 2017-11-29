@@ -1,68 +1,129 @@
 {
-    "name": "vscodefitnesse",
-    "displayName": "VS Code FitNesse",
-    "description": "Extension used to format FitNesse wiki from Visual Studio Code.",
-    "version": "1.0.2",
-    "publisher": "chrisotto",
-    "engines": {
-        "vscode": "^1.18.0"
-    },
-    "license": "MIT",
-    "icon": "images/vscodefitnesse.png",
-    "preview": false,
-    "keywords": [
-        "fitnesse",
-        "wiki",
-        "formatter"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/chrisotto6/VSCodeFitNesse.git"
-    },
+  "name": "vscodefitnesse",
+  "displayName": "VS Code FitNesse",
+  "description": "Extension used to format FitNesse wiki from Visual Studio Code.",
+  "version": "1.0.2",
+  "publisher": "chrisotto",
+  "engines": {
+    "vscode": "^1.18.0"
+  },
+  "license": "MIT",
+  "icon": "images/vscodefitnesse.png",
+  "preview": false,
+  "keywords": [
+    "fitnesse",
+    "wiki",
+    "formatter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisotto6/VSCodeFitNesse.git"
+  },
     "homepage": "https://chrisotto6.github.io/VSCodeFitNesse",
-    "bugs": {
-        "url": "https://github.com/chrisotto6/VSCodeFitNesse/issues"
-    },
-    "categories": [
-        "Other",
-        "Languages",
-        "Formatters"
+  "bugs": {
+    "url": "https://github.com/chrisotto6/VSCodeFitNesse/issues"
+  },
+  "categories": [
+    "Other",
+    "Languages",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:text"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "text",
+        "aliases": [
+          "FitNesse",
+          "fitnesse"
+        ],
+        "extensions": [
+          "content.txt"
+        ],
+        "filenames": [
+          "content.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "activationEvents": [
-        "onLanguage:text"
+    "commands": [
+      {
+        "command": "extension.format",
+        "title": "Format FitNesse Document",
+        "category": "FitNesse"
+      },
+      {
+        "command": "extension.formatContextMenu",
+        "title": "Format FitNesse Document(s)",
+        "category": "FitNesse"
+      }
     ],
-    "main": "./out/extension",
-    "contributes": {
-        "languages": [
-            {
-                "id": "text",
-                "aliases": [
-                    "FitNesse",
-                    "fitnesse"
-                ],
-                "extensions": [
-                    "content.txt"
-                ],
-                "filenames": [
-                    "content.txt"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test",
-        "lint": "tslint test/*.ts -t verbose"
-    },
-    "devDependencies": {
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42",
-        "tslint": "^5.7.0",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.8"
+    "keybindings": [
+      {
+        "command": "extension.format",
+        "key": "Shift+Alt+F",
+        "mac": "Shift+Alt+F",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.format",
+          "when": "editorFocus"
+        },
+        {
+          "command": "extension.formatContextMenu",
+          "when": "false"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == text",
+          "command": "extension.formatContextMenu",
+          "group": "1_modification"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceLangId == text",
+          "command": "extension.formatContextMenu",
+          "group": "1_modification"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "when": "resourceLangId == text",
+          "command": "extension.formatContextMenu",
+          "group": "1_modification"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "extension.formatContextMenu",
+          "group": "1_modification"
+        }
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "lint": "tslint test/*.ts -t verbose"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "tslint": "^5.7.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.8"
+  }
 }

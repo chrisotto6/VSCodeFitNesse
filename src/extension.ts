@@ -13,4 +13,16 @@ export function activate(ctx: vscode.ExtensionContext) {
     let controller = new FormatterController(instance);
 
     ctx.subscriptions.push(controller);
+    
+    // The command has been defined in the package.json file
+    // Now provide the implementation of the command with  registerCommand
+    // The commandId parameter must match the command field in package.json
+    ctx.subscriptions.push(vscode.commands.registerCommand('extension.format', () => {
+        // The code you place here will be executed every time your command is executed
+        instance.format();
+    }));
+    ctx.subscriptions.push(vscode.commands.registerCommand('extension.formatContextMenu', (uri) => {
+        // The code you place here will be executed every time your command is executed
+        instance.formatContextMenu(uri.fsPath);
+    }));
 }
