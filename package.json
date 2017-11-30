@@ -29,7 +29,8 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onLanguage:text"
+    "onLanguage:text",
+    "onCommand:extension.formatContextMenu"
   ],
   "main": "./out/extension",
   "contributes": {
@@ -83,21 +84,21 @@
       "editor/context": [
         {
           "when": "resourceLangId == text",
-          "command": "extension.formatContextMenu",
+          "command": "extension.format",
           "group": "1_modification"
         }
       ],
       "editor/title": [
         {
           "when": "resourceLangId == text",
-          "command": "extension.formatContextMenu",
+          "command": "extension.format",
           "group": "1_modification"
         }
       ],
       "editor/title/context": [
         {
           "when": "resourceLangId == text",
-          "command": "extension.formatContextMenu",
+          "command": "extension.format",
           "group": "1_modification"
         }
       ],
