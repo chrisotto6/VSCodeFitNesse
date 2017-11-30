@@ -242,7 +242,7 @@ export class WikiFormatter {
   //   * Utility functions
   //
   trim(text) {
-    return (text || "").replace(/^\s+|\s+$/g, "");
+    return (text || "").replace(/^[^\S\r\n]+|[^\S\r\n]+$/g, "");
   }
 
   each(array, callback, context) {
