@@ -21,7 +21,7 @@ export class Formatter {
 
         // Need to make sure the document is a text document see language-configuration.json and package.json
         // For specifics around the FitNesse language addition
-        if (_doc.languageId === "text" && _doc.isDirty) {
+        if (_doc.languageId === "text") {
 
             // Variable Creation
             let wiki = new WikiFormatter();
@@ -50,7 +50,8 @@ export class Formatter {
         
         files = files.filter(file => file.endsWith("content.txt"));
         
-        vscode.window.showWarningMessage("You are about to format " + files.length + " test files.\nDo you wish to continue?", { modal: true }, "Yes", "No").then(answer => {
+        vscode.window.showWarningMessage("You are about to format " + files.length + 
+        " test files.\nDo you wish to continue?", { modal: true }, "Yes", "No").then(answer => {
             if (answer !== "Yes") {
                 return;
             }
