@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.1.0
+* Minor release with more format functionality
+### Added
+* Changes to README.md for better representation in marketplace
+* Shift + alt + f key key binding for format of FitNesse files
+* Menu option for formatting directories containing FitNesse files
+* Menu option to format files from R-click in menu
+* Travis CI to validate master branch
+
 ## 1.0.1
 * Post Release fixes
 ### Added

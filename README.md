@@ -1,7 +1,7 @@
 # VS Code FitNesse
 [![MarketPlaceVersion](https://vsmarketplacebadge.apphb.com/version/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse)  [![MarketPlaceInstalls](https://vsmarketplacebadge.apphb.com/installs/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse)  [![MarketPlaceRating](https://vsmarketplacebadge.apphb.com/rating/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![TravisCIBuild](https://travis-ci.org/chrisotto6/VSCodeFitNesse.svg?branch=master)](https://travis-ci.org/chrisotto6/VSCodeFitNesse)
 
-A Visual Studio Code extension for formatting your FitNesse tests.
+A Visual Studio Code extension for your FitNesse tests.
 
 ## Features
 
@@ -9,9 +9,19 @@ A Visual Studio Code extension for formatting your FitNesse tests.
     * By adding the language, it ensures that the formatting only applies to content.txt files that get created with FitNesse
     * Allows for auto pairing on some of the FitNesse markup style's character formatting
  * Formats content.txt FitNesse files on save
+ * Shfit + Alt + F - Format Keybinding
+ * Menu option for formatting a directory
+ * Menu option for formatting a specific file
 
-![Demo](images/demo.gif)
+### Demos
+#### Format on Save
+![SaveDemo](images/SaveDemo.gif)
 
+#### Format from Menu
+![MenuDemo](images/MenuDemo.gif)
+
+#### Format Directory
+![DirectoryDemo](images/DirectoryDemo.gif)
 
 ## Requirements
 
@@ -24,7 +34,15 @@ Be on the latest version of VS Code (utilizes workspaces), other than that there
 
 ## Major Release Notes
 
+### 1.1.0
+
+    * Added changes to README.md for better representation in marketplace
+    * Added shift + alt + f key key binding for format of FitNesse files
+    * Added menu option for formatting directories containing FitNesse files
+    * Added menu option to format files from R-click in menu
+    * Added Travis CI to validate master branch
+
 ### 1.0.0
 
-Initial release of VS Code FitNesse.
-Includes all main functional requirements outlined in the feature section. 
+    * Initial release of VS Code FitNesse.
+    * Includes all main functional requirements outlined in the feature section. 
