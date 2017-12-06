@@ -1,4 +1,3 @@
-import * as repl from 'repl';
 export class WikiFormatter {
   wikificationPrevention;
 
