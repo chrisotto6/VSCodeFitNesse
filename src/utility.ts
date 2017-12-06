@@ -20,6 +20,10 @@ export class Utility {
         return vscode.workspace.getConfiguration("fitnesse").get<string>("preExecutionCommand");
     }
 
+    public getPostExecCommand() {
+        return vscode.workspace.getConfiguration("fitnesse").get<string>("postExecutionCommand");
+    }
+
     public getFitnesseInstance() {
         // Get the path of the current test in the editor
         let path = vscode.window.activeTextEditor.document.fileName;

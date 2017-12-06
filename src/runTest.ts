@@ -13,10 +13,13 @@ export class TestRunner {
     private _port: string;
     private _jar: string;
     private _preCommand: string;
+    private _postCommand: string;
 
     constructor() {
         this._terminal = null;
         this._util = new Utility();
+        this._preCommand = this._util.getPreExecCommand();
+        this._postCommand = this._util.getPostExecCommand();
     }
 
     public changeDirectoryCommand() {
@@ -44,14 +47,15 @@ export class TestRunner {
 
         this._terminal.show();
 
-        if (this._util.getPreExecCommand() !== null) {
-            if (this._util.getPreExecCommand() !== "") {
-                this._terminal.sendText(this._util.getPreExecCommand());
-            }
+        if (this._preCommand !== null && this._preCommand !== "") {
+            this._terminal.sendText(this._util.getPreExecCommand());
         }
-
 
         this._terminal.sendText(this.changeDirectoryCommand());
         this._terminal.sendText(this.executionCommand());
+        
+        if (this._postCommand !== null && this._postCommand !== "") {
+            this._terminal.sendText(this._util.getPreExecCommand());
+        }
     }
 }

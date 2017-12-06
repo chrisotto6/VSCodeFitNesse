@@ -74,6 +74,11 @@
             "type":"string",
             "default":null,
             "description": "Command text that will be ran before each test run, configurable for varying enrivonments."
+          },
+          "fitnesse.postExecutionCommand": {
+            "type": "string",
+            "default": null,
+            "description": "Command test that will be ran after each test run, configurable for varying environments."
           }
         }
       }
