@@ -21,7 +21,7 @@ export class Formatter {
 
         // Need to make sure the document is a text document see language-configuration.json and package.json
         // For specifics around the FitNesse language addition
-        if (_doc.languageId === "text") {
+        if (_doc.languageId === "fitnesse") {
 
             // Variable Creation
             let wiki = new WikiFormatter();
