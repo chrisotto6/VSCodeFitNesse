@@ -76,7 +76,7 @@ export class WikiFormatter {
   //   *   - increase the non colspan columns if the colspan columns lengths are greater
   //   *   - adjust colspan columns to pad out to the max length of the row
   //   *
-  //   * Feel free to refator as necessary for clarity
+  //   * Feel free to refactor as necessary for clarity
   //
   calculateColumnWidths(rows) {
     let widths = this.getRealColumnWidths(rows);
@@ -108,6 +108,10 @@ export class WikiFormatter {
   }
 
   splitRow(row) {
+    let replacement = '__TEMP_PIPE_CHARACTER__';
+    if (row.match(/!-/)) {
+      row = this.replacePipesInLiteralsWithPlaceholder(row, replacement);
+    }
     let columns = this.trim(row).split("|");
     if (!this.wikificationPrevention && columns[0] === "!") {
       this.wikificationPrevention = true;
@@ -115,9 +119,39 @@ export class WikiFormatter {
     }
     columns = columns.slice(1, columns.length);
     this.each(columns, function (column, i) {
-      columns[i] = this.trim(column);
+      columns[i] = this.trim(column).replace(/__TEMP_PIPE_CHARACTER__/g, '|');
     }, this);
     return columns;
+  }
+
+  replacePipesInLiteralsWithPlaceholder(text, rep) {
+    let newText = "";
+
+    while(text.match(/!-/)) {
+      var textParts = this.splitLiteral(text);
+      newText = newText + textParts.left + textParts.literal.replace(/\|/g, rep);
+      text = textParts.right;
+    }
+    return newText + text;
+  }
+
+  splitLiteral(text) {
+    let leftText = "";
+    let rightText = "";
+    let literalText = "";
+
+    let matchOpenLiteral = text.match(/(.*?)(!-.*)/);
+    leftText = matchOpenLiteral[1];
+    if (matchOpenLiteral[2].match(/-!/)) {
+      var matchCloseLiteral = matchOpenLiteral[2].match(/(.*?-!)(.*)/);
+      literalText = matchCloseLiteral[1];
+      rightText = matchCloseLiteral[2];
+    }
+    else {
+      literalText = matchOpenLiteral[2];
+      rightText = "";
+    }
+    return {left:leftText, literal:literalText, right:rightText};
   }
 
   getRealColumnWidths(rows) {
