@@ -14,12 +14,14 @@ export class TestRunner {
     private _jar: string;
     private _preCommand: string;
     private _postCommand: string;
+    private _otherConfigs: string;
 
     constructor() {
         this._terminal = null;
         this._util = new Utility();
         this._preCommand = this._util.getPreExecCommand();
         this._postCommand = this._util.getPostExecCommand();
+        this._otherConfigs = this._util.getOtherCommandArguments();
     }
 
     public changeDirectoryCommand() {
@@ -35,12 +37,13 @@ export class TestRunner {
         this._memory = this._util.getJvmMemory();
 
         let command = "java -Xmx" + this._memory + "m -jar " + this._jar + " -p " +
-            this._port + " -c " + this._test + "?test^&format=text";
+            this._port + " " + this._otherConfigs + "-c " + this._test + "?test^&format=text";
+
+        console.log(command);
         return command;
     }
 
     public run() {
-
         if (this._terminal === null) {
             this._terminal = vscode.window.createTerminal(`Ext Terminal`);
         }

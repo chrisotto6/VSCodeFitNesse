@@ -70,6 +70,46 @@
             "default": "8080",
             "description": "Port to be used for running tests."
           },
+          "fitnesse.rootPath":{
+            "type":"string",
+            "default":null,
+            "description": "The directory in which FitNesse expects to find its page root. It defaults to the current directory ('.')."
+          },
+          "fitnesse.fitnesseRoot":{
+            "type":"string",
+            "default":null,
+            "description": "The directory in which FitNesse looks for top level pages."
+          },
+          "fitnesse.logLevel":{
+            "type": "boolean",
+            "default":null,
+            "description": "Set the system log level to verbose."
+          },
+          "fitnesse.logDirectory":{
+            "type":"string",
+            "default":null,
+            "description": "If argument is not present, FitNesse will not create access log files. If set creates access log files in specified directory."
+          },
+          "fitnesse.versionsControllerDays":{
+            "type":"integer",
+            "default":null,
+            "description": "Sets the expiration date for page versions, any page version older than the number of days they are considered expired."
+          },
+          "fitnesse.omittingUpdates": {
+            "type": "boolean",
+            "default": null,
+            "description": "When a new version of FitNesse runs for the first time, it checks the existing environment to see if any new changes need to made to existing instance of FitNesse."
+          },
+          "fitnesse.redirectOutput": {
+            "type":"string",
+            "default":null,
+            "description": "Redirect command output."
+          },
+          "fitnesse.plugins": {
+            "type":"string",
+            "default":null,
+            "description": "Load an alternative configuration file. The format adhere's to the java standard of property files."
+          },
           "fitnesse.preExecutionCommand": {
             "type":"string",
             "default":null,
