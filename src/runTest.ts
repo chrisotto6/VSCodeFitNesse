@@ -39,7 +39,6 @@ export class TestRunner {
         let command = "java -Xmx" + this._memory + "m -jar " + this._jar + " -p " +
             this._port + " " + this._otherConfigs + "-c " + this._test + "?test^&format=text";
 
-        console.log(command);
         return command;
     }
 
