@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.0
+* Major Release
+### Added
+* Added the ability to run tests that are currently open in the editor
+* Added configurations needed when running FitNesse
+
 ## 1.1.0
 * Minor release with more format functionality
 ### Added

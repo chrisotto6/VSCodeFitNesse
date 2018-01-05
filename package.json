@@ -57,8 +57,13 @@
         "properties": {
           "fitnesse.javaVirtualMachineMemory": {
             "type": "string",
-            "default": "768",
+            "default": "768m",
             "description": "Java memory setting for running tests."
+          },
+          "fitnesse.javaClassPath": {
+            "type":"string",
+            "default":null,
+            "description": "Java class path parameter for running FitNesse through the JVM."
           },
           "fitnesse.fitnesseJarLocation": {
             "type": "string",

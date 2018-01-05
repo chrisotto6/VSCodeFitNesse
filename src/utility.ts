@@ -8,6 +8,10 @@ export class Utility {
         return vscode.workspace.getConfiguration("fitnesse").get<string>("javaVirtualMachineMemory");
     }
 
+    public getJavaClassPath() {
+        return vscode.workspace.getConfiguration("fitnesse").get<string>("javaClassPath");
+    }
+
     public getFitJar() {
         return vscode.workspace.getConfiguration("fitnesse").get<string>("fitnesseJarLocation");
     }
