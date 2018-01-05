@@ -34,7 +34,7 @@ A Visual Studio Code extension for your FitNesse tests.
 Outlined below are the configurations that have been added to run tests through VS Code's integrated terminal.
 
 ### Required Configurations
-When running a test the '-c' argument is filled out by the extension based on what test you have open in the editor.
+When running a test the '-c' and '-d' arguments are filled out by the extension based on what test you have open in the editor.
 
 >// Java memory setting for running tests.\
   "fitnesse.javaVirtualMachineMemory": "768m"
@@ -46,8 +46,9 @@ When running a test the '-c' argument is filled out by the extension based on wh
   "fitnesse.fitnessePort": "8080"
 
 ### Optional Configurations
->// The directory in which FitNesse looks for top level pages.\
-  "fitnesse.fitnesseRoot": null
+>
+>// Java class path parameter for running FitNesse through the JVM.\
+  "fitnesse.javaClassPath": null,
 >
 >// If argument is not present, FitNesse will not create access log files. If set creates access log files in specified directory.\
   "fitnesse.logDirectory": null
