@@ -29,14 +29,14 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onLanguage:text",
-    "onCommand:extension.formatContextMenu"
+    "onLanguage:fitnesse",
+    "onCommand:fitnesse.formatContextMenu"
   ],
   "main": "./out/extension",
   "contributes": {
     "languages": [
       {
-        "id": "text",
+        "id": "fitnesse",
         "aliases": [
           "FitNesse",
           "fitnesse"
@@ -50,61 +50,169 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "configuration":[
+      {
+        "type": "object",
+        "title": "FitNesse configuration",
+        "properties": {
+          "fitnesse.javaVirtualMachineMemory": {
+            "type": "string",
+            "default": "768m",
+            "description": "Java memory setting for running tests."
+          },
+          "fitnesse.javaClassPath": {
+            "type":"string",
+            "default":null,
+            "description": "Java class path parameter for running FitNesse through the JVM."
+          },
+          "fitnesse.fitnesseJarLocation": {
+            "type": "string",
+            "default": "C:\\someLocation\\testing\\fitnesse\\fitnesse-standalone.jar",
+            "description": "Location of the FitNesse .jar for running tests."
+          },
+          "fitnesse.fitnessePort": {
+            "type":"string",
+            "default": "8080",
+            "description": "Port to be used for running tests."
+          },
+          "fitnesse.rootPath":{
+            "type":"string",
+            "default":null,
+            "description": "The directory in which FitNesse expects to find its page root. It defaults to the current directory ('.')."
+          },
+          "fitnesse.fitnesseRoot":{
+            "type":"string",
+            "default":null,
+            "description": "The directory in which FitNesse looks for top level pages."
+          },
+          "fitnesse.logLevel":{
+            "type": "boolean",
+            "default":null,
+            "description": "Set the system log level to verbose."
+          },
+          "fitnesse.logDirectory":{
+            "type":"string",
+            "default":null,
+            "description": "If argument is not present, FitNesse will not create access log files. If set creates access log files in specified directory."
+          },
+          "fitnesse.versionsControllerDays":{
+            "type":"integer",
+            "default":null,
+            "description": "Sets the expiration date for page versions, any page version older than the number of days they are considered expired."
+          },
+          "fitnesse.omittingUpdates": {
+            "type": "boolean",
+            "default": null,
+            "description": "When a new version of FitNesse runs for the first time, it checks the existing environment to see if any new changes need to made to existing instance of FitNesse."
+          },
+          "fitnesse.redirectOutput": {
+            "type":"string",
+            "default":null,
+            "description": "Redirect command output."
+          },
+          "fitnesse.plugins": {
+            "type":"string",
+            "default":null,
+            "description": "Load an alternative configuration file. The format adhere's to the java standard of property files."
+          },
+          "fitnesse.preExecutionCommand": {
+            "type":"string",
+            "default":null,
+            "description": "Command text that will be ran before each test run, configurable for varying enrivonments."
+          },
+          "fitnesse.postExecutionCommand": {
+            "type": "string",
+            "default": null,
+            "description": "Command test that will be ran after each test run, configurable for varying environments."
+          }
+        }
+      }
+    ],
     "commands": [
       {
-        "command": "extension.format",
+        "command": "fitnesse.format",
         "title": "Format FitNesse Document",
         "category": "FitNesse"
       },
       {
-        "command": "extension.formatContextMenu",
+        "command": "fitnesse.formatContextMenu",
         "title": "Format FitNesse Document(s)",
+        "category": "FitNesse"
+      },
+      {
+        "command": "fitnesse.runTest",
+        "title": "Run Fitnesse Test",
         "category": "FitNesse"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.format",
+        "command": "fitnesse.format",
         "key": "Shift+Alt+F",
         "mac": "Shift+Alt+F",
         "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "command": "fitnesse.runTest",
+        "key": "Shift+Alt+T",
+        "mac": "Shift+Alt+T",
+        "when": "editorTextFocus && editorLangId == 'fitnesse'"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "extension.format",
+          "command": "fitnesse.format",
           "when": "editorFocus"
         },
         {
-          "command": "extension.formatContextMenu",
+          "command": "fitnesse.formatContextMenu",
           "when": "false"
+        },
+        {
+          "command": "fitnesse.runTest",
+          "when": "editorFocus"
         }
       ],
       "editor/context": [
         {
-          "when": "resourceLangId == text",
-          "command": "extension.format",
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.format",
           "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.runTest",
+          "group": "navigation"
         }
       ],
       "editor/title": [
         {
-          "when": "resourceLangId == text",
-          "command": "extension.format",
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.format",
           "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.runTest",
+          "group": "navigation"
         }
       ],
       "editor/title/context": [
         {
-          "when": "resourceLangId == text",
-          "command": "extension.format",
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.format",
           "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == fitnesse",
+          "command": "fitnesse.runTest",
+          "group": "navigation"
         }
       ],
       "explorer/context": [
         {
-          "command": "extension.formatContextMenu",
+          "command": "fitnesse.formatContextMenu",
           "group": "1_modification"
         }
       ]

@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { Formatter } from './format';
 import { FormatterController } from './formatController';
+import { TestRunner } from './runTest';
 
 // called when the extension is activated
 export function activate(ctx: vscode.ExtensionContext) {
@@ -10,19 +11,22 @@ export function activate(ctx: vscode.ExtensionContext) {
 
     // Create a new instance of the formatter class for command execution and for controller on save functionality
     let instance = new Formatter();
+    let runner = new TestRunner();
     let controller = new FormatterController(instance);
 
+    // Subscribe the Format Controller for on save functionality
     ctx.subscriptions.push(controller);
     
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with  registerCommand
-    // The commandId parameter must match the command field in package.json
-    ctx.subscriptions.push(vscode.commands.registerCommand('extension.format', () => {
-        // The code you place here will be executed every time your command is executed
+    // Register the two different format commands for non on save functionality
+    ctx.subscriptions.push(vscode.commands.registerCommand('fitnesse.format', () => {
         instance.format();
     }));
-    ctx.subscriptions.push(vscode.commands.registerCommand('extension.formatContextMenu', (uri) => {
-        // The code you place here will be executed every time your command is executed
+    ctx.subscriptions.push(vscode.commands.registerCommand('fitnesse.formatContextMenu', (uri) => {
         instance.formatContextMenu(uri.fsPath);
+    }));
+
+    // Register the commands for the test runner functionality
+    ctx.subscriptions.push(vscode.commands.registerCommand('fitnesse.runTest', (uri) => {
+        runner.run();
     }));
 }
