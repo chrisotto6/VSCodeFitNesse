@@ -76,6 +76,9 @@ When running a test the '-c' and '-d' arguments are filled out by the extension 
 >
 >// Sets the expiration date for page versions, any page version older than the number of days they are considered expired.\
   "fitnesse.versionsControllerDays": null
+>
+>// When determining the highest level of the path of the test this setting is used. The default is FrontPage as that is what Fitnesse expects.\
+  "fitnesse.topPage":"FrontPage"
 
 ## Requirements
 
