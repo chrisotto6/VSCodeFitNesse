@@ -50,7 +50,7 @@
         "configuration": "./language-configuration.json"
       }
     ],
-    "configuration":[
+    "configuration": [
       {
         "type": "object",
         "title": "FitNesse configuration",
@@ -61,8 +61,8 @@
             "description": "Java memory setting for running tests."
           },
           "fitnesse.javaClassPath": {
-            "type":"string",
-            "default":null,
+            "type": "string",
+            "default": null,
             "description": "Java class path parameter for running FitNesse through the JVM."
           },
           "fitnesse.fitnesseJarLocation": {
@@ -71,33 +71,33 @@
             "description": "Location of the FitNesse .jar for running tests."
           },
           "fitnesse.fitnessePort": {
-            "type":"string",
+            "type": "string",
             "default": "8080",
             "description": "Port to be used for running tests."
           },
-          "fitnesse.rootPath":{
-            "type":"string",
-            "default":null,
+          "fitnesse.rootPath": {
+            "type": "string",
+            "default": null,
             "description": "The directory in which FitNesse expects to find its page root. It defaults to the current directory ('.')."
           },
-          "fitnesse.fitnesseRoot":{
-            "type":"string",
-            "default":null,
+          "fitnesse.fitnesseRoot": {
+            "type": "string",
+            "default": null,
             "description": "The directory in which FitNesse looks for top level pages."
           },
-          "fitnesse.logLevel":{
+          "fitnesse.logLevel": {
             "type": "boolean",
-            "default":null,
+            "default": null,
             "description": "Set the system log level to verbose."
           },
-          "fitnesse.logDirectory":{
-            "type":"string",
-            "default":null,
+          "fitnesse.logDirectory": {
+            "type": "string",
+            "default": null,
             "description": "If argument is not present, FitNesse will not create access log files. If set creates access log files in specified directory."
           },
-          "fitnesse.versionsControllerDays":{
-            "type":"integer",
-            "default":null,
+          "fitnesse.versionsControllerDays": {
+            "type": "integer",
+            "default": null,
             "description": "Sets the expiration date for page versions, any page version older than the number of days they are considered expired."
           },
           "fitnesse.omittingUpdates": {
@@ -106,24 +106,29 @@
             "description": "When a new version of FitNesse runs for the first time, it checks the existing environment to see if any new changes need to made to existing instance of FitNesse."
           },
           "fitnesse.redirectOutput": {
-            "type":"string",
-            "default":null,
+            "type": "string",
+            "default": null,
             "description": "Redirect command output."
           },
           "fitnesse.plugins": {
-            "type":"string",
-            "default":null,
+            "type": "string",
+            "default": null,
             "description": "Load an alternative configuration file. The format adhere's to the java standard of property files."
           },
           "fitnesse.preExecutionCommand": {
-            "type":"string",
-            "default":null,
+            "type": "string",
+            "default": null,
             "description": "Command text that will be ran before each test run, configurable for varying enrivonments."
           },
           "fitnesse.postExecutionCommand": {
             "type": "string",
             "default": null,
             "description": "Command test that will be ran after each test run, configurable for varying environments."
+          },
+          "fitnesse.topPage": {
+            "type": "string",
+            "default": "FrontPage",
+            "description": "When determining the highest level of the path of the test this setting is used. The default is FrontPage as that is what Fitnesse expects."
           }
         }
       }

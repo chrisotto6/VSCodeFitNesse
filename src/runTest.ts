@@ -39,7 +39,7 @@ export class TestRunner {
         } 
         else {
             command = "java -Xmx" + this._memory + " -jar " + this._jar + " -p " +
-                this._port + " " + this._otherConfigs + "-d " + this._instance + " -c " + this._test + "?test^&format=text";
+                this._port + " " + this._otherConfigs + "-d " + this._instance + " -c " + this._test; //+ "?test^&format=text";
         }
         return command;
     }
