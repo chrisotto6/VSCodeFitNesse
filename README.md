@@ -82,7 +82,7 @@ When running a test the '-c' and '-d' arguments are filled out by the extension 
 
 ## Requirements
 
-Be on the latest version of VS Code (utilizes workspaces), other than that there are no requirements or configurations for the end user to set up. Also assumes that you have Java installed to run FitNesse, through JVM. 
+Be on the latest version of VS Code (utilizes workspaces). Also assumes that you have Java installed to run FitNesse, through the JVM. 
 
 ## Known Issues
 
