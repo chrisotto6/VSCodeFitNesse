@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.4
+* Patch
+### Added
+* Added issue template, code of conduct, contributing documentation and a pull request template
+* Cleaned up a documentation miss in the README.md
+
 ## 1.2.0
 * Major Release
 ### Added
