@@ -20,7 +20,7 @@
       "patterns": [
         {
           "name": "support.type.property-name",
-          "match": "(\\|library.+?(?=\\|)\\||\\|script.?(?=\\|)\\||\\|comment.+?(?=\\|)\\||\\|scenario.+?(?=\\|)\\||\\|Query.+?(?=\\|)\\||\\|import.+?(?=\\|)\\||\\|Ordered query\\.+?(?=\\|)\\||\\|Subset Query.+?(?=\\|)\\||\\|Table.+?(?=\\|)\\|)"
+          "match": "(\\|library.*?(?=\\|)\\||\\|script.*?(?=\\|)\\||\\|comment.*?(?=\\|)\\||\\|scenario.*?(?=\\|)\\||\\|Query.*?(?=\\|)\\||\\|import.*?(?=\\|)\\||\\|Ordered query\\.*?(?=\\|)\\||\\|Subset Query.*?(?=\\|)\\||\\|Table.*?(?=\\|)\\|)"
         },
         {
           "name": "entity.name.class",
@@ -41,7 +41,7 @@
         },
         {
           "name": "string.quoted.double",
-          "match": "\"\\S*\""
+          "match": "(\"+(?!\\$\\{\\S*\\})\\S*\"|\")"
         }
       ]
     },
