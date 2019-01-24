@@ -19,7 +19,7 @@
 
 ## 1.2.0
 
-- Major Release
+- Minor Release
 
 ### Added
 
@@ -28,7 +28,7 @@
 
 ## 1.1.0
 
-- Minor release with more format functionality
+- Minor release
 
 ### Added
 
@@ -40,7 +40,7 @@
 
 ## 1.0.1
 
-- Post Release fixes
+- Patch
 
 ### Added
 
