@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "fitnesse",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "support.type.property-name",
+          "match": "(script|comment|scenario|Query|import|Ordered query|Subset Query|Table)"
+        },
+        {
+          "name": "support.type",
+          "match": "(!include|!today|!1.*|!2.*|!3.*|!4.*|!5.*|!6.*|!note.*|!path.*)"
+        },
+        {
+          "name": "support.type",
+          "match": "(\\.[a-zA-Z]+)"
+        },
+        {
+          "name": "variable.language",
+          "match": "\\$\\{.*\\}"
+        },
+        {
+          "name": "string.quoted.double",
+          "match": "\".*\""
+        },
+        {
+          "name": "string.quoted.single",
+          "match": "\\'.*\\'"
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment",
+      "patterns": [
+        {
+          "name": "comment",
+          "match": "^\\s*#.*"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.fitnesse"
+}
