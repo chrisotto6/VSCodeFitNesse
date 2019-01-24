@@ -3,38 +3,45 @@
   "name": "fitnesse",
   "patterns": [
     {
-      "include": "#keywords"
+      "include": "#main"
+    },
+    {
+      "include": "#quotes"
     },
     {
       "include": "#comments"
+    },
+    {
+      "include": "#links"
     }
   ],
   "repository": {
-    "keywords": {
+    "main": {
       "patterns": [
         {
           "name": "support.type.property-name",
-          "match": "(script|comment|scenario|Query|import|Ordered query|Subset Query|Table)"
+          "match": "(\\|library.+?(?=\\|)\\||\\|script.?(?=\\|)\\||\\|comment.+?(?=\\|)\\||\\|scenario.+?(?=\\|)\\||\\|Query.+?(?=\\|)\\||\\|import.+?(?=\\|)\\||\\|Ordered query\\.+?(?=\\|)\\||\\|Subset Query.+?(?=\\|)\\||\\|Table.+?(?=\\|)\\|)"
         },
         {
-          "name": "support.type",
-          "match": "(!include|!today|!1.*|!2.*|!3.*|!4.*|!5.*|!6.*|!note.*|!path.*)"
+          "name": "entity.name.class",
+          "match": "(!define.*|!include.*|!today|!1.*|!2.*|!3.*|!4.*|!5.*|!6.*|!note.*|!path.*)"
         },
         {
-          "name": "support.type",
-          "match": "(\\.[a-zA-Z]+)"
-        },
+          "name": "storage.type",
+          "match": "\\$\\{\\S*?(?=\\})\\}"
+        }
+      ]
+    },
+    "quotes": {
+      "name": "quotes",
+      "patterns": [
         {
-          "name": "variable.language",
-          "match": "\\$\\{.*\\}"
+          "name": "string.quoted.single",
+          "match": "(\\'+\\w*.+?(?=\\')\\'\\'\\'|\\'+\\w*.+?(?=\\')\\'\\'|\\'+(?!\\$\\{\\S*\\})\\S+?(?=\\')\\'|\\')"
         },
         {
           "name": "string.quoted.double",
-          "match": "\".*\""
-        },
-        {
-          "name": "string.quoted.single",
-          "match": "\\'.*\\'"
+          "match": "\"\\S*\""
         }
       ]
     },
@@ -44,6 +51,15 @@
         {
           "name": "comment",
           "match": "^\\s*#.*"
+        }
+      ]
+    },
+    "links": {
+      "name": "links",
+      "patterns": [
+        {
+          "name": "markup.underline.link",
+          "match": "\\[\\[.+?(?=\\])\\]\\[.+?(?=\\])\\]\\]"
         }
       ]
     }
