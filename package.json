@@ -13,7 +13,8 @@
   "keywords": [
     "fitnesse",
     "wiki",
-    "formatter"
+    "formatter",
+    "syntax"
   ],
   "repository": {
     "type": "git",
@@ -48,6 +49,13 @@
           "content.txt"
         ],
         "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fitnesse",
+        "scopeName": "source.fitnesse",
+        "path": "./syntaxes/feature.tmLanguage.json"
       }
     ],
     "configuration": [
