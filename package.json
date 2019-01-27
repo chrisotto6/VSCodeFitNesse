@@ -5,7 +5,7 @@
   "version": "1.3.1",
   "publisher": "chrisotto",
   "engines": {
-    "vscode": "^1.18.0"
+    "vscode": "^1.23.0"
   },
   "license": "MIT",
   "icon": "images/vscodefitnesse.png",
@@ -246,6 +246,6 @@
     "path": "^0.12.7",
     "tslint": "^5.7.0",
     "typescript": "^2.6.1",
-    "vscode": "^1.1.8"
+    "vscode": "^1.1.28"
   }
 }
