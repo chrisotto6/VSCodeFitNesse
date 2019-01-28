@@ -18,9 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export class Formatter {
-  // Main format function which will happen on save
   public format() {
-    // Variable creation
     let _editor = vscode.window.activeTextEditor;
     let _doc = _editor.document;
     let lastLine = _doc.lineAt(_doc.lineCount - 2);
@@ -31,8 +29,6 @@ export class Formatter {
       return;
     }
 
-    // Need to make sure the document is a text document see language-configuration.json and package.json
-    // For specifics around the FitNesse language addition
     if (_doc.languageId === "fitnesse") {
       // Variable Creation
       let wiki = new WikiFormatter();
@@ -48,12 +44,9 @@ export class Formatter {
   }
 
   public formatContextMenu(uri) {
-    const me = this; // because I'm lazy and don't want to deal with scope binding...
     const fs = require("fs");
     const path = require("path");
 
-    // get all files in a given directory, or return an array containing a single file if URI is not a directory
-    // https://gist.github.com/kethinov/6658166
     const walkSync = d =>
       fs.statSync(d).isDirectory()
         ? Array.prototype.concat(
@@ -82,7 +75,7 @@ export class Formatter {
         let _editor = vscode.window.activeTextEditor;
         files.forEach(file => {
           if (_editor && _editor.document.fileName === file) {
-            me.format();
+            this.format();
             return;
           }
 
