@@ -112,6 +112,11 @@ Be on the latest version of VS Code (utilizes workspaces). Also assumes that you
 
 ## Major Release Notes
 
+### 1.4.0
+
+    * Added the ability to collapse FitNesse collapsable sections
+    * Added all-contributors bot
+
 ### 1.3.0
 
     * Added syntax highlighting for key FitNesse words, variables, double quote, single quote, comment and links

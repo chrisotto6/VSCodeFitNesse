@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.4.0
+
+- Minor Release
+
+### Added
+
+- Added the ability to collapse FitNesse collapsable sections
+- Added all-contributors bot
+
 ## 1.3.0
 
 - Minor Release
