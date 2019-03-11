@@ -1,6 +1,6 @@
 # VS Code FitNesse
 
-[![MarketPlaceVersion](https://vsmarketplacebadge.apphb.com/version/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![MarketPlaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![MarketPlaceInstalls](https://vsmarketplacebadge.apphb.com/installs/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![TravisCIBuild](https://travis-ci.org/chrisotto6/VSCodeFitNesse.svg?branch=master)](https://travis-ci.org/chrisotto6/VSCodeFitNesse) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![MarketPlaceVersion](https://vsmarketplacebadge.apphb.com/version/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![MarketPlaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![MarketPlaceInstalls](https://vsmarketplacebadge.apphb.com/installs/chrisotto.vscodefitnesse.svg)](https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse) [![TravisCIBuild](https://travis-ci.org/chrisotto6/VSCodeFitNesse.svg?branch=master)](https://travis-ci.org/chrisotto6/VSCodeFitNesse) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 A Visual Studio Code extension for your FitNesse tests.
 
@@ -147,9 +147,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/5222069?v=4" width="100px;" alt="Chris"/><br /><sub><b>Chris</b></sub>](http://chrisotto.tech/)<br />[💻](https://github.com/chrisotto6/VSCodeFitNesse/commits?author=chrisotto6 "Code") [🎨](#design-chrisotto6 "Design") |
-| :---: |
-
+| [<img src="https://avatars3.githubusercontent.com/u/5222069?v=4" width="100px;" alt="Chris"/><br /><sub><b>Chris</b></sub>](http://chrisotto.tech/)<br />[💻](https://github.com/chrisotto6/VSCodeFitNesse/commits?author=chrisotto6 "Code") [🎨](#design-chrisotto6 "Design") | [<img src="https://avatars3.githubusercontent.com/u/20071596?v=4" width="100px;" alt="almightywiz"/><br /><sub><b>almightywiz</b></sub>](https://github.com/almightywiz)<br />[💻](https://github.com/chrisotto6/VSCodeFitNesse/commits?author=almightywiz "Code") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
