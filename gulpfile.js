@@ -10,38 +10,8 @@ const gitOptions = {
   semver: ""
 };
 
-function changelog(done) {
-  const image = "ferrarimarco/github-changelog-generator";
-  const version = require("./package.json").version;
-  const ghToken = process.env.GITHUB_TOKEN;
-
-  var run = spawn(
-    "docker",
-    [
-      "run",
-      "-it",
-      "--rm",
-      "-v",
-      process.cwd() + ":/usr/local/src/your-app",
-      image,
-      "--token",
-      ghToken,
-      "--future-release",
-      "v" + version
-    ],
-    {
-      cwd: process.cwd(),
-      stdio: "inherit"
-    }
-  );
-
-  run.on("exit", function(exitCode) {
-    done(exitCode);
-  });
-}
-
 function createTag() {
-  return gulp.src(["./package.json"]).pipe(tag_version());
+  return gulp.src(["./package.json"]).pipe(tag());
 }
 
 function createCommit() {
@@ -61,8 +31,4 @@ function versionBump(done) {
     });
 }
 
-gulp.task("changelog", gulp.series(changelog));
-gulp.task(
-  "release",
-  gulp.series(versionBump, changelog, createCommit, createTag)
-);
+gulp.task("release", gulp.series(versionBump, createCommit, createTag));
