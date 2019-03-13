@@ -247,5 +247,8 @@
     "tslint": "^5.7.0",
     "typescript": "^2.6.1",
     "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0"
   }
 }
