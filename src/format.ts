@@ -1,7 +1,7 @@
 "use strict";
 
 import * as vscode from "vscode";
-import { WikiFormatter } from "./wikiFormatter";
+import * as wikiformat from "fitnesse-format";
 
 export function activate(context: vscode.ExtensionContext) {
   const formatter = new Formatter();
@@ -31,14 +31,12 @@ export class Formatter {
 
     if (_doc.languageId === "fitnesse") {
       // Variable Creation
-      let wiki = new WikiFormatter();
       let text = _doc.getText();
-      let formattedText = wiki.format(text);
+      let formattedText = wikiformat(text);
 
       _editor.edit(update => {
         update.replace(new vscode.Range(start, end), formattedText);
       });
-
       return;
     }
   }
@@ -83,15 +81,12 @@ export class Formatter {
             if (err) {
               return console.log(err);
             }
-
-            let wiki = new WikiFormatter();
-            let formattedText = wiki.format(data);
+            let formattedText = wikiformat(data);
 
             fs.writeFile(file, formattedText, "utf8", function(err) {
               if (err) {
                 return console.log(err);
               }
-
               console.log("The file was saved!");
             });
           });
