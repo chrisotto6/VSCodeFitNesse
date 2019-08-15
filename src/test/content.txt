@@ -1,0 +1,20 @@
+|column1|column2|
+|1      |2      |
+
+|column1|column2|
+|1      |!(|
+|3      |4      |
+
+|column1|column2|
+|1      |2      |
+
+!|table         |
+|column1|column2|
+|1      |2      |
+
+!|ThisTableWillNotInterpret|!c any directives           |'''it is treated''' |
+|!1 like a literal         |--and is especially useful--|''for test tables.''|
+|^SinceTheyTend            |* to have WikiWord symbols in them.              |
+
+|column!-|-!|column2|
+|1          |2      |
