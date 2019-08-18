@@ -116,6 +116,7 @@ Be on the latest version of VS Code (utilizes workspaces). Also assumes that you
 
     * Added the ability to collapse FitNesse collapsable sections
     * Added all-contributors bot
+    * Added consumption of fitnesse-format node package
 
 ### 1.3.0
 
