@@ -245,7 +245,7 @@
     "fitnesse-format": "^1.0.1",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
-    "tslint": "^5.7.0",
+    "tslint": "^5.20.1",
     "typescript": "^2.6.1",
     "vscode": "^1.1.33"
   }
