@@ -242,7 +242,7 @@
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "fitnesse-format": "^1.0.2",
-    "@types/node": "^12.12.8",
+    "@types/node": "^12.12.11",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
     "tslint": "^5.20.1",
