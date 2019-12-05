@@ -43,7 +43,8 @@
           "fitnesse"
         ],
         "extensions": [
-          "content.txt"
+          "content.txt",
+          ".wiki"
         ],
         "filenames": [
           "content.txt"

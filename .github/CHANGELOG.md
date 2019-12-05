@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.5.0
+
+- Minor Release
+
+### Added
+
+- Added .wiki support
+
 ## 1.4.0
 
 - Minor Release
