@@ -87,11 +87,6 @@ When running a test the '-c' and '-d' arguments are filled out by the extension 
 
 Be on the latest version of VS Code (utilizes workspaces). Also assumes that you have Java installed to run FitNesse, through the JVM.
 
-## Known Issues
-
-> As of right now only works with context.txt files any other kind of test caching or file extensions do not work. I believe the latest version of FitNesse comes
-> with a new .wiki extension. If you need to format the .wiki file extension please log an issue to the Github page.
-
 ## Demos
 
 ### Syntax Highlighting
@@ -111,6 +106,10 @@ Be on the latest version of VS Code (utilizes workspaces). Also assumes that you
 ![DirectoryDemo](images/DirectoryDemo.gif)
 
 ## Major Release Notes
+
+### 1.5.0
+
+    * Added .wiki support
 
 ### 1.4.0
 
@@ -150,6 +149,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/5222069?v=4" width="100px;" alt="Chris"/><br /><sub><b>Chris</b></sub>](http://chrisotto.tech/)<br />[💻](https://github.com/chrisotto6/VSCodeFitNesse/commits?author=chrisotto6 "Code") [🎨](#design-chrisotto6 "Design") | [<img src="https://avatars3.githubusercontent.com/u/20071596?v=4" width="100px;" alt="almightywiz"/><br /><sub><b>almightywiz</b></sub>](https://github.com/almightywiz)<br />[💻](https://github.com/chrisotto6/VSCodeFitNesse/commits?author=almightywiz "Code") |
 | :---: | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
