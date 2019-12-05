@@ -13,8 +13,38 @@
 |1     |2    |
 
 !|ThisTableWillNotInterpret|!c any directives       |'''it is treated''' |
-|!1 like a literal         |--and is especially useful--|''for test tables.''|
+|! 1 like a literal         |--and is especially useful--|''for test tables.''|
 |^SinceTheyTend      |* to have WikiWord symbols in them.         |
 
 |column!-|-!|column2|
 |1  |2   |
+
+Table key words
+|library|
+|script|fitnesse driver|
+|comment|
+|scenario|
+|Query |[select * from user]|
+|import|
+
+! key words
+!define whatAbout {Bob}
+!today (MM)
+!include .FrontPage.SomeOtherFitNessePage
+!1 Heading
+!path C:\fitnesse
+
+Variables and Strings
+${whatAbout}
+'${whatAbout}'
+"${whatAbout}"
+'single'
+''double-single''
+'''triple-single'''
+"double"
+
+Comments
+# Comment about test
+
+Links
+[[Link to FrontPage][.FrontPage]]
