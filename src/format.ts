@@ -32,8 +32,7 @@ export class Formatter {
     if (_doc.languageId === "fitnesse") {
       // Variable Creation
       let text = _doc.getText();
-      let wiki = wikiformat(text);
-      let formattedText = wiki.format(text);
+      let formattedText = wikiformat(text);
 
       _editor.edit(update => {
         update.replace(new vscode.Range(start, end), formattedText);
