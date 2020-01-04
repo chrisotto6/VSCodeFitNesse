@@ -242,12 +242,12 @@
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.12.14",
     "fitnesse-format": "^1.0.2",
+    "@types/node": "^13.1.2",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.3",
+    "typescript": "^3.7.4",
     "vscode": "^1.1.33"
   }
 }
