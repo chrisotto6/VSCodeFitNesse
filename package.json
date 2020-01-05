@@ -2,7 +2,7 @@
   "name": "vscodefitnesse",
   "displayName": "VS Code FitNesse",
   "description": "Extension used to interact FitNesse tests from Visual Studio Code.",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "publisher": "chrisotto",
   "engines": {
     "vscode": "^1.23.0"
