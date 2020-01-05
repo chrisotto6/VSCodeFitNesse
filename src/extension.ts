@@ -1,7 +1,7 @@
 "use strict";
 
 import * as vscode from "vscode";
-import * as wikiformat from "fitnesse-format";
+import { WikiFormatter } from "./wikiFormatter";
 import { activate as activateFormatter } from "./format";
 import { activate as activateFormatterController } from "./formatController";
 import { activate as activateTestRunner } from "./runTest";
@@ -24,7 +24,8 @@ export function activate(ctx: vscode.ExtensionContext) {
         let lastLine = document.lineAt(document.lineCount - 2);
         let start = new vscode.Position(0, 0);
         let end = new vscode.Position(document.lineCount, lastLine.text.length);
-        let formattedText = wikiformat(document.getText());
+        let wiki = new WikiFormatter();
+        let formattedText = wiki.format(document.getText());
 
         return [
           vscode.TextEdit.replace(new vscode.Range(start, end), formattedText)
