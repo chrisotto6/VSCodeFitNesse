@@ -241,7 +241,7 @@
     "lint": "tslint test/*.ts -t verbose"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.7",
+    "@types/mocha": "^7.0.1",
     "@types/node": "^13.5.1",
     "fitnesse-format": "^1.0.5",
     "fs": "0.0.1-security",
