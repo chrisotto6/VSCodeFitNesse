@@ -242,7 +242,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^8.0.0",
-    "@types/node": "^14.0.25",
+    "@types/node": "^14.0.26",
     "fitnesse-format": "^1.0.5",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
